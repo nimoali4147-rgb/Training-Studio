@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class=" bg-slate-900/50 h-20">
+        <!-- hambager -->
+        <div class="display-none max-w-[786] flex justify-center items-center t-20 hidden md:flex md:hidden">
+            <i class="fa-solid fa-bars text-blue-600  "></i>
+            <i class="fa-solid fa-close"></i>
+        </div>
+    
+        <!-- navbar -->
+    <nav>
+       
+        <div class="flex justify-around items-center relative z-10 ">
+            <!-- logo -->
+            <div class="font-bold text-3xl leading-20">
+                <span class="text-white">TRAINING</span>
+                <span class="text-red-400">STUDIO</span>
+            </div>
+            <!-- links -->
+            <ul class="flex gap-20 text-white font-bold h-20 items-center  text-lg ">
+                <li><a href="home">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="classes">Classes</a></li>
+                <li><a href="schedules">Schedules</a></li>
+                <li><a href="contact">Contact</a></li>
+            </ul>
+            <button class="bg-red-400 h-9 w-18 text-white font-bold ">Sign Up</button>
+        </div>
+    
+    </nav>
+       </header>
+
+      <section class="relative h-400  overflow-hidden">
+
+        <!-- Background Video -->
+        <video
+            class="w-full absolute inset-0  bg-black/40  inset-0 absolute"
+            autoplay
+            muted
+            loop
+            playsinline 
+        >
+            <source src="video.mp4" type="video/mp4">
+        </video>
+<!--  -->
+     </section>
+
+        <div class="absolute inset-0 z-10  text-white items-center justify-center text-center py-20 mt-40">
+            <div>
+                <h2 >WORK HARDER, GET STRONGER</h2>
+                <div class="text-6xl p-6 font-bold">
+                <span>EAASY WITH OUR<span>
+                <span class="text-red-400">GYM</span>  
+                </div>
+              
+            </div>
+           
+            <button class="bg-red-400 w-46.5 h-12 text-white text-md ">BECOME A MEMBER</button>
+        </div>
+       
+
+
+        
+</body>
+</html>
