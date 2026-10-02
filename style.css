@@ -6,5 +6,58 @@
 
 body {
     font-family: "Inter", sans-serif;
-  
+    margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+.nav-link {
+  position: relative;
+  color: white;
+  transition: color 0.25s ease;
+}
+
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -8px;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: center;
+  background: #9747ff;
+  transition: transform 0.25s ease;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.mobile-link {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.mobile-link:hover {
+  color: #9747ff;
+}
+
+
+@media (max-width: 640px) {
+  section {
+    overflow: hidden;
+  }
 }

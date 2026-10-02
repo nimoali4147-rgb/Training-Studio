@@ -1,89 +1,424 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trainer-Studio</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
      <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
       <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header class="fixed top-0 left-0 w-full bg-gray-900/60 h-20 z-20">
-             <!-- navbar-->
-        <nav class="h-full">
-            <div class="max-w-7xl mx-auto px-6 h-full flex justify-around items-center">
-                <!-- logo -->
-                <div class="font-bold text-3xl md:text-3xl">
-                    <span class="text-white">TRAINING</span>
-                    <span class="text-red-400">STUDIO</span>
-                </div>
-               
-                  <!-- desktop menu -->
-                <div class="hidden md:flex gap-8 text-white font-bold h-20 items-center text-lg ">
-                    <a href="#home" class="font-semibold hover:text-red-400">Home</a>
-                    <a href="#about" class="font-semibold hover:text-red-400">About</a>
-                   <a href="#classes" class="font-semibold hover:text-red-400">Classes</a>
-                   <a href="#schedules" class="font-semibold hover:text-red-400">Schedules</a>
-                    <a href="#contact" class="font-semibold hover:text-red-400">Contact</a>
-                    <a href="#contact" class="font-semibold hover:text-red-400">Sign Up</a>
-                </div>
+  <!-- NAVBAR -->
+  <header class="absolute top-0 left-0 z-50 w-full">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 lg:px-8">
 
-                        <!-- hambager -->
-                <div class="md:hidden text-white text-2xl">
-                    <i class="fa-solid fa-bars text-blue-600"></i>
-                    <i class="fa-solid fa-close w-9 h-9 bg-blue-400 rounded-full text-center justify-center"></i>
-                </div>
+      <div class="text-2xl font-extrabold tracking-tight">
+        <span class="text-white">TRAINING</span>
+        <span class="text-purple-400">STUDIO</span>
+      </div>
+
+      <!-- Desktop navigation -->
+      <div class="hidden items-center gap-7 lg:flex">
+        <a href="#home" class="nav-link text-md font-bold ">HOME</a>
+        <a href="#about" class="nav-link text-sm font-bold ">ABOUT</a>
+        <a href="#classes" class="nav-link text-sm font-bold ">CLASSES</a>
+        <a href="#schedule" class="nav-link text-sm font-bold">SCHEDULE</a>
+        <a href="#trainers" class="nav-link text-sm font-bold">TRAINING</a>
+        <a href="#blog" class="nav-link text-sm font-bold">BLOG</a>
+      </div>
+
+      <a href="#classes"
+         class="hidden rounded-lg bg-purple-600 px-3 py-2 text-md font-bold text-white shadow-purple-200 transition hover:-translate-y-0.5 hover:bg-violet-500 lg:inline-flex">
+        Join Now
+      </a>
+
+      <!-- mobile menu -->
+      <div class="relative lg:hidden">
+         <!-- hambager -->
+                <button>
+                    <i class="fa-solid fa-bars bg-purple-600 h-11 w-11 flex p-3 pt-2 items-center justify-center rounded-full text-2xl text-white"></i>
+                    <!-- <i class="fa-solid fa-close w-9 h-9 bg-blue-400 rounded-full text-center justify-center"></i>
+           -->  </button>
     
-               
+
+        <div class="invisible absolute right-0 top-14 w-64 translate-y-2 rounded-2xl border border-white/10 bg- p-5 opacity-2 shadow-2xl transition-all duration-300 peer-checked:visible peer-checked:translate-y-0 ">
+          <div class="flex flex-col gap-4">
+            <a href="#home" class="mobile-link">Home</a>
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#classes" class="mobile-link">Classes</a>
+            <a href="#schedule" class="mobile-link">Schedule</a>
+            <a href="#trainers" class="mobile-link">Trainers</a>
+            <a href="#blog" class="mobile-link">Blog</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- HERO -->
+  <main id="home">
+    <section class="relative isolate min-h-[780px] overflow-hidden bg-black">
+  <div class="absolute inset-0 bg-purple-600/10"></div>
+  
+      <div class="absolute inset-0">
+        <img
+          src="assets/bg.png"
+          alt="background-image"
+          class="h-full w-full object-cover object-center opacity-55">
+
+      <div class="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-purple/25"></div>
+
+      </div>
+
+      <div class="relative mx-auto flex min-h-180 max-w-7xl items-center px-5 pb-12 pt-32 lg:px-8">
+        <div class="max-w-3xl">
+          <p class="mb-5 text-sm font-bold uppercase tracking-[0.28em] text-purple">Training Begins</p>
+
+          <h1 class="text-5xl font-extrabold tracking-tight sm:text-6xl md:text-8xl lg:text-10xl">
+            STRONGER
+            <span class="block text-purple-500">EVERY DAY</span>
+          </h1>
+
+          <p class="mt-7 max-w-xl text-base leading-7 text-white/90 sm:text-lg">
+            Build your strength, improve your movement and become the strongest version of yourself with training made for real progress.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="#classes"
+               class="rounded-lg bg-purple-700 text-white px-7 py-4 font-bold shadow-purple transition hover:translate-y-1 hover:bg-violet-500">
+              JOIN NOW <span class="ml-2">→</span>
+            </a>
+            <a href="#about"
+               class="rounded-lg text-white border border-white/50 px-7 py-4 font-bold transition hover:border-purple hover:text-purple">
+              VIEW CLASSES
+            </a>
+          </div>
+
+          <div class="mt-12 grid max-w-2xl grid-cols-3 gap-5 border-t border-white/15 pt-7">
+            <div>
+              <p class="text-3xl text-white font-extrabold sm:text-4xl">10<span class="text-purple">+</span></p>
+              <p class="mt-1 text-xs uppercase tracking-wider text-white/50">Expert Trainers</p>
             </div>
-        </nav>
-
-                <!-- Mobile menu -->
-            <div id="mobile-menu" class="hidden md:hidden bg-slate-900 px-6 pb-6">
-            <div class="flex flex-col gap-4 pt-3">
-                <a href="#home" class="mobile-link text-white font-semibold">Home</a>
-                <a href="#about" class="mobile-link text-white font-semibold">About</a>
-                <a href="#classes" class="mobile-link text-white font-semibold">Classes</a>
-                <a href="#schedule" class="mobile-link text-white font-semibold">Schedules</a>
-                <a href="#contact" class="mobile-link text-white font-semibold">Contact</a>
-                <a href="#contact" class="mobile-link bg-red-400 text-white text-center px-4 py-2 font-semibold">Sign Up</a>
+            <div>
+              <p class="text-3xl text-white font-extrabold sm:text-4xl">50<span class="text-purple">+</span></p>
+              <p class="mt-1 text-xs uppercase tracking-wider text-white/50">Weekly Classes</p>
             </div>
+            <div class="text-white">
+              <p class="text-3xl font-extrabold sm:text-4xl">1K<span class="text-purple">+</span></p>
+              <p class="mt-1 text-xs uppercase tracking-wider text-white/50">Happy Members</p>
             </div>
-      
-    </header>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <section id="home" class="relative h-[85vh] w-full overflow-hidden flex items-center justify-center text-center">
 
-        <!-- Background Video -->
-        <video
-            class="w-full h-full absolute inset-0 object-cover"
-            autoplay
-            muted
-            loop
-            playsinline 
-        >
-            <source src="video.mp4" type="video/mp4">
-        </video>
+    <!-- ABOUT -->
+    <section id="about" class="scroll-mt-20 bg-cream-400 py-20 text-white sm:py-24">
+      <div class="mx-auto grid max-w-7xl items-center gap-12  px-5 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
 
-        <!-- Overlay -->
-        <div class="absolute inset-0 bg-black/50 z-10"></div>
+        <div>
+          <p class="mb-3 text-3xl font-extrabold tracking-0.2em text-purple-600">About Us</p>
+          <h2 class="max-w-xl text-4xl font-extrabold leading-none text-black/90 sm:text-5xl">
+            <span> MORE THAN </span> <br>
+            <span>JUST A GYM</span> 
+          </h2>
 
-        <!--Hero Content-->
-        <div class="relative z-10 text-white px-4 mt-20">
-            <h2 class="text-xl font-bold tracking-wider">WORK HARDER, GET STRONGER</h2>
-            <div class="text-4xl md:text-6xl my-4 font-bold">
-                <span>EASY WITH OUR </span><span class="text-red-400">GYM</span>  
-            </div>
-            <button class="bg-red-400 px-6 py-3 mt-4 text-white text-md font-bold tracking-wide rounded-sm">BECOME A MEMBER</button>
+          <p class="mt-6 max-w-xl text-base leading-7 text-black/70">
+            We are a training community built around consistency, confidence and measurable progress. Whether you are starting out or pushing for your next personal best, there is a place for you here.
+          </p>
+
+          <a href="#trainers"
+             class="mt-7 inline-flex rounded-lg bg-purple-600 px-7 py-4 font-bold text-white shadow-gray-400 transition hover:translate-y-1 hover:bg-violet-500">
+            Meet Our Team <span class="ml-2">→</span>
+          </a>
         </div>
 
-     </section>
+        <div class="relative">
+          <div class="absolute -left-4 top-8 h-full w-full rounded-2xl bg-purple-600"></div>
+          <img
+            src="assets/imag.png"
+            alt=""
+            class="relative h-[390px] w-full rounded-2xl object-cover sm:h-[470px]">
+        </div>
+      </div>
 
+      <div class="mx-auto mt-55 mb-20 grid max-w-7xl gap-8 px-5 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
+        <article class="rounded-2xl bg-white p-6 shadow-lg">
+       <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl   bg-blue-950 text-xl text-white">
+           <i class="fa-solid fa-dumbbell"></i>
+      </div>
+          <h3 class="text-xl font-extrabold text-black">Expert Trainers</h3>
+          <p class="mt-2 text-md leading-6 text-black/55">Coaches who keep your training focused, safe and effective.</p>
+        </article>
+
+        <article class="rounded-2xl bg-white p-6 shadow-lg">
+         <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-950 text-xl text-white">
+           <i class="fa-solid fa-weight-hanging"></i>
+        </div>
+          <h3 class="text-xl font-extrabold text-black">Modern Equipment</h3>
+          <p class="mt-2 text-md leading-6 text-black/55">Quality equipment for strength, cardio and functional training.</p>
+        </article>
+
+        <article class="rounded-2xl bg-white p-6 shadow-lg">
+              <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-950 text-white">
+        <i class="fa-solid fa-clock"></i>
+    </div>
+
+          <h3 class="text-xl font-extrabold text-black">Flexible Schedule</h3>
+          <p class="mt-2 text-md leading-6 text-black/55">Morning, evening and weekend sessions to fit your routine.</p>
+        </article>
+
+        <article class="rounded-2xl bg-white p-6 shadow-lg">
+              <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-950 text-white">
+        <i class="fa-solid fa-user"></i>
+    </div>
+
+          <h3 class="text-lg font-extrabold text-black">Supportive Community</h3>
+          <p class="mt-2 text-md leading-6 text-black/55">Train with people who motivate you to keep showing up.</p>
+        </article>
+      </div>
+    </section>
+
+
+    <!-- CLASSES -->
+    <section id="classes" class="bg-black/90 py-20 sm:py-24 text-white">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+
+        <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p class="mb-3 text-sm font-extrabold tracking-[0.2em] text-purple">OUR CLASSES</p>
+            <h2 class="text-4xl font-extrabold leading-none sm:text-5xl">
+              FIND A CLASS<br><span class="text-purple-600">YOU'LL LOVE</span>
+            </h2>
+          </div>
+
+          <a href="#schedule" class="inline-flex w-fit rounded-lg border border-white/30 px-6 py-3 text-sm font-bold transition hover:border-purple-400 hover:text-purple-600">
+            VIEW ALL CLASSES  <i class="fa-solid fa-plus ml-2"></i>
+          </a>
+        </div>
+
+        <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="group overflow-hidden rounded-2xl bg-black/90">
+            <div class="relative h-64 overflow-hidden">
+              <img src="assets/str.png"
+                   alt=""
+                   class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
+              <span class="absolute bottom-3 left-3 rounded-full bg-purple-600 px-3 py-1 text-xs font-bold">STRENGTH</span>
+            </div>
+            <div class="flex items-center justify-between gap-3 p-5">
+              <div>
+                <h3 class="font-extrabold">Strength Training</h3>
+                <p class="mt-1 text-xs text-white/45">Build power and confidence.</p>
+              </div>
+            <a href="#schedule"
+                  class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-purple-600 font-bold transition hover:scale-110">
+                  <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="group overflow-hidden rounded-2xl bg-black/90">
+            <div class="relative h-64 overflow-hidden">
+              <img src="assets/box.png"
+                   alt=""
+                   class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
+              <span class="absolute bottom-3 left-3 rounded-full bg-purple-600 px-3 py-1 text-xs font-bold ">BOXING</span>
+            </div>
+            <div class="flex items-center justify-between gap-3 p-5">
+              <div>
+                <h3 class="font-extrabold">Boxing</h3>
+                <p class="mt-1 text-xs text-white/45">High-energy full-body training.</p>
+              </div>
+             <a href="#schedule"
+                  class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-purple-600 font-bold transition hover:scale-110">
+                  <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="group overflow-hidden rounded-2xl bg-black/90">
+            <div class="relative h-64 overflow-hidden">
+              <img src="assets/yog.png"
+                   alt=""
+                   class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
+              <span class="absolute bottom-3 left-3 rounded-full bg-purple-600 px-3 py-1 text-xs font-bold ">YOGA</span>
+            </div>
+            <div class="flex items-center justify-between gap-3 p-5">
+              <div>
+                <h3 class="font-extrabold">Yoga</h3>
+                <p class="mt-1 text-xs text-white/45">Mobility, balance and recovery.</p>
+              </div>
+             <a href="#schedule"
+                  class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-purple-600 font-bold transition hover:scale-110">
+                  <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="group overflow-hidden rounded-2xl bg-black/90">
+            <div class="relative h-64 overflow-hidden">
+              <img src="assets/cros.png"
+                   alt=""
+                   class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
+              <span class="absolute bottom-3 left-3 rounded-full bg-purple-600 px-3 py-1 text-xs font-bold">CROSSFIT</span>
+            </div>
+            <div class="flex items-center justify-between gap-3 p-5">
+              <div>
+                <h3 class="font-extrabold">CrossFit</h3>
+                <p class="mt-1 text-sm text-white/45">Conditioning for every level.</p>
+              </div>
+                <a href="#schedule"
+                  class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-purple-600 font-bold transition hover:scale-110">
+                  <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SCHEDULE -->
+    <section id="schedule" class="bg-cream-400 py-20 text-black/90 sm:py-24">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="grid gap-12 lg:grid-cols-2 lg:items-start">
+          <div>
+            <p class="mb-3 text-sm font-extrabold tracking-[0.2em] text-purple-600">WEEKLY SCHEDULE</p>
+            <h2 class="text-4xl font-extrabold leading-none sm:text-5xl">TRAIN ON<br><span class="text-purple">YOUR TIME</span></h2>
+            <p class="mt-6 max-w-md leading-7 text-black/85">
+              Pick a session that fits your week. Classes are designed for different goals and experience levels.
+            </p>
+          </div>
+
+          <div class="overflow-hidden rounded-2xl border border-black/10 bg-white">
+            <div class="grid grid-cols-3 border-b border-black/10 bg-black/90 px-5 py-4 text-xs font-bold uppercase tracking-wider text-white">
+              <span>Class</span><span>Time</span><span>Level</span>
+            </div>
+            <div class="divide-y divide-black/10">
+              <div class="grid grid-cols-3 px-5 py-5 text-sm"><span class="font-bold">Strength</span><span>07:00 AM</span><span>All Levels</span></div>
+              <div class="grid grid-cols-3 px-5 py-5 text-sm"><span class="font-bold">Boxing</span><span>10:00 AM</span><span>Intermediate</span></div>
+              <div class="grid grid-cols-3 px-5 py-5 text-sm"><span class="font-bold">Yoga</span><span>05:30 PM</span><span>All Levels</span></div>
+              <div class="grid grid-cols-3 px-5 py-5 text-sm"><span class="font-bold">CrossFit</span><span>07:00 PM</span><span>Advanced</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- TRAINERS -->
+    <section id="trainers" class="scroll-mt-20 bg-black/90 text-white py-20 sm:py-24">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="text-center">
+          <p class="mb-3 text-sm font-extrabold  tracking-[0.2em] text-purple">OUR TRAINERS</p>
+          <h2 class="text-4xl font-extrabold sm:text-5xl">TRAIN WITH THE BEST</h2>
+        </div>
+
+        <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <article>
+            <div class="overflow-hidden rounded-2xl">
+              <img src="assets/trai.png"
+                   alt=""
+                   class="h-80 w-full object-cover ">
+            </div>
+            <h3 class="mt-5 text-xl font-extrabold">Alex Morgan</h3>
+            <p class="mt-1 text-sm text-purple">Strength Coach</p>
+          </article>
+
+          <article>
+            <div class="overflow-hidden rounded-2xl">
+              <img src="assets/tra3.png"
+                   alt=""
+                   class="h-80 w-full object-cover">
+            </div>
+            <h3 class="mt-5 text-xl font-extrabold">Maya James</h3>
+            <p class="mt-1 text-sm text-purple">Mobility Coach</p>
+          </article>
+
+          <article class="group">
+            <div class="overflow-hidden rounded-2xl">
+              <img src="assets/tra2.png"
+                   alt=""
+                   class="h-80 w-full object-cover">
+            </div>
+            <h3 class="mt-5 text-xl font-extrabold">Jordan Lee</h3>
+            <p class="mt-1 text-sm text-purple">Performance Coach</p>
+          </article>
+
+          <article class="group">
+            <div class="overflow-hidden rounded-2xl">
+              <img src="assets/tra4.png"
+                   alt=""
+                   class="h-80 w-full object-cover">
+            </div>
+            <h3 class="mt-5 text-xl font-extrabold">Sam Rivera</h3>
+            <p class="mt-1 text-sm text-purple">Conditioning Coach</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- BLOG -->
+    <section id="blog" class="scroll-mt-20 bg-cream py-20 sm:py-24">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p class="mb-3 text-sm font-extrabold tracking-[0.2em] text-purple">FROM THE BLOG</p>
+            <h2 class="text-4xl font-extrabold sm:text-5xl">TRAIN SMATER</h2>
+          </div>
+          <a href="#blog" class="text-sm font-bold text-purple">VIEW ALL POSTS
+             <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-3">
+          <article class="overflow-hidden rounded-2xl bg-white">
+            <img src="assets/blo1.png"
+                 alt=""
+                 class="h-56 w-full object-cover">
+            <div class="p-6">
+              <p class="text-sm font-bold tracking-wider text-purple-600">TRAINING</p>
+              <h3 class="mt-2 text-xl font-extrabold">How To Build A Consistent Routine</h3>
+              <p class="mt-3 text-sm leading-6 text-black/85">Simple habits that help you keep showing up week after week.</p>
+            </div>
+          </article>
+
+          <article class="overflow-hidden rounded-2xl bg-white">
+            <img src="assets/blo2.png"
+                 alt=""
+                 class="h-56 w-full object-cover">
+            <div class="p-6">
+              <p class="text-sm font-bold tracking-wider text-purple-600">WELLNESS</p>
+              <h3 class="mt-2 text-xl font-extrabold">Recovery Is Part Of Training</h3>
+              <p class="mt-3 text-sm leading-6 text-black/85">Why rest, mobility and sleep matter when you are chasing progress.</p>
+            </div>
+          </article>
+
+          <article class="overflow-hidden rounded-2xl bg-white">
+            <img src="assets/blo3.png"
+                 alt=""
+                 class="h-56 w-full object-cover">
+            <div class="p-6">
+              <p class="text-sm font-bold  tracking-wider text-purple-600">NUTRITION</p>
+              <h3 class="mt-2 text-xl font-extrabold">Fuel Your Stronger Days</h3>
+              <p class="mt-3 text-sm leading-6 text-black/85">Practical nutrition habits to support an active lifestyle.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="border-t-2 border-purple-400 bg-black/90 py-10">
+      <p class="text-md text-white/90 text-center font-bold">© 2026 Trainer Studio. Stronger every day.</p>
+   </footer>
 
 </body>
 </html>
